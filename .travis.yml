@@ -1,3 +1,11 @@
+language: node_js
+node_js:
+- stable
+- '6'
+- '4'
+script:
+- "npm install -g vuepress"
+- "npm run docs:build && cd .vuepress/dist && echo 'architecturecoding.com' > CNAME"
 deploy:
 	keep_history: true
 	local_dir: docs/.vuepress/dist/
@@ -6,11 +14,3 @@ deploy:
 	token: $GITHUB_ACCESS_TOKEN
 	true:
 		branch: master
-install:
-	- "npm ci"
-language: node_js
-node_js:
-	- lts/*
-script:
-	- "npm install -g vuepress"
-	- "npm run docs:build && cd .vuepress/dist && echo 'architecturecoding.com' > CNAME"

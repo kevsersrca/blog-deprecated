@@ -4,10 +4,13 @@
   "description": "--- home: true heroImage: gopher.png heroText: Devops & Coding tagline: architecturecoding actionText: Tricks → actionLink: /tricks/ features: - title: Tutorials   details: Coming Soon. - title: Tricks   details: Coming Soon. - title: Series   details: Coming Soon. footer: MIT Licensed | Copyright © 2019-present ---",
   "main": "index.js",
   "scripts": {
-	  "docs:build": "vuepress build docs",
-	  "docs:dev": "vuepress dev docs"
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "travis-lint": "^1.0.0"
+  }
 }

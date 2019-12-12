@@ -1,0 +1,16 @@
+deploy:
+	keep_history: true
+	local_dir: docs/.vuepress/dist/
+	provider: pages
+	skip_cleanup: true
+	token: $GITHUB_ACCESS_TOKEN
+	true:
+		branch: master
+install:
+	- "npm ci"
+language: node_js
+node_js:
+	- lts/*
+script:
+	- "npm install -g vuepress"
+	- "npm run docs:build && cd .vuepress/dist && echo 'architecturecoding.com' > CNAME"
