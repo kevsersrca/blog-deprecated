@@ -1,4 +1,3 @@
----
 deploy:
 	keep_history: true
 	local_dir: docs/.vuepress/dist/
