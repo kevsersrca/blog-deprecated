@@ -14,7 +14,6 @@ module.exports = {
 			{ text: 'Home', link: '/' },
 			{ text: 'Tutorials', link: '/tutorials/' },
 			{ text: 'Tricks', link: '/tricks/' },
-			{ text: 'Series', link: '/series/' },
 		],
 		sidebar: 'false',
 		logo: '/gopher.png',
@@ -25,9 +24,9 @@ module.exports = {
 		repoLabel: 'Contribute!',
 		// Optional options for generating "Edit this page" link
 		// if your docs are in a different repo from your main project:
-		docsRepo: 'vuejs/vuepress',
+		docsRepo: 'kevsersrca/blog',
 		// if your docs are not at the root of the repo:
-		docsDir: 'docs',
+		docsDir: 'gh-pages',
 		// if your docs are in a specific branch (defaults to 'master'):
 		docsBranch: 'master',
 		// defaults to false, set to true to enable

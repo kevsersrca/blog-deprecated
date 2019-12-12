@@ -15,11 +15,17 @@
 </template>
 
 <style>
+	img {
+		width: 100%;
+		max-width: 400px;
+		height: auto;
+		padding-left: 20%;
+	}
 	.date{
 		color: gray;
 		font-size: small;
 	}
-	.tutorials{
+	.tutorial{
 		margin-top: 5%;
 		border-style: dotted ;
 		border-color: whitesmoke;
