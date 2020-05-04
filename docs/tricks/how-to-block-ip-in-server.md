@@ -2,12 +2,14 @@
 title: How to block ip in server ?
 description: Lets block ip address in server with iptables
 lang: en-US
-prev: false
-next: false
-editLink: true
-image: /iptables.png
+image: /iptables.jpg
 date: 2019-12-12
+tag: iptables
+author: kev
+layout: Post
 ---
+
+[[toc]]
 
 ### Lets block ip address in server with iptables
 

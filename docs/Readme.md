@@ -1,9 +1,8 @@
 ---
 home: true
-heroImage: gopher.png
-heroText: Devops & Coding
-tagline: architecturecoding
-actionText: Tricks →
-actionLink: /tricks/
-footer: MIT Licensed | Copyright © 2019-present
+layout: HomeLayout
+heroImage: /gopher.png
+footer: MIT Licensed | Copyright © 2019-present kev
 ---
+### Tricks
+<b-latest-tricks :summary="false"/>

@@ -2,14 +2,15 @@
 title: AWS Lambda Tutorial - I
 description: Let create a lambda server with Golang
 lang: en-US
-prev: false
-next: false
-editLink: true
 image: /aws-lambda.png
-date: 2019-12-9
+date: 2019-12-12
+tag: aws-lambda-create
+layout: Post
 ---
 
-# How to create lambda with golang on AWS
+[[toc]]
+
+## How to create lambda with golang on AWS
 
 As for me, aws lambda most usefull server. Fast and cheap. You can see if you want to see how cheap it is. [Lambda Cost Calculator](https://dashbird.io/lambda-cost-calculator/)
 
@@ -70,7 +71,7 @@ func main() {
 
 ```bash
  λ GOOS=linux GOARCH=amd64 go build main.go
- λ zip main.zip main 
+ λ zip main.zip main
 ```
 
 ### Finally, deploy lambda

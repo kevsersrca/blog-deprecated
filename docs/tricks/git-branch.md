@@ -2,12 +2,14 @@
 title: How does git branch work?
 description: Git branch add, list and delete
 lang: en-US
-prev: false
-next: false
-editLink: true
 image: /branch.png
 date: 2019-12-11
+tag: git-branch
+author: kev
+layout: Post
 ---
+
+[[toc]]
 
 ### How to create new brach
 
@@ -21,16 +23,15 @@ git checkout -b feature/feature-name
 git branch
 ```
 
-### How to delete remote branches
 
-#### Delete local branch
+### How to delete local branch
 
 ```bash
 git branch -d feature/feature-name
 ```
 
-#### Delete remote branch
+### How to delete remote branch
 
 ```bash
 git push origin --delete feature/feature-name
-``` 
+```

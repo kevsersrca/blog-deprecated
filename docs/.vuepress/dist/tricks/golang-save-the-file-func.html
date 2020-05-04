@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Golang File create and write function | architecturecoding</title>
+    <meta name="description" content="Let create a file">
+    <link rel="stylesheet" href="/octicons.css">
+  <link rel="icon" href="/gopher.png">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="google-site-verification" content="tBy_B1L3z31YSdMNxFcSPKZYJZKXidfUrpM0n2arV34">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxanium&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.9c12eaa6.css" as="style"><link rel="preload" href="/assets/js/app.ba5b4a04.js" as="script"><link rel="preload" href="/assets/js/14.a7f0b124.js" as="script"><link rel="preload" href="/assets/js/2.684f57a3.js" as="script"><link rel="preload" href="/assets/js/22.f287162d.js" as="script"><link rel="preload" href="/assets/js/40.dd74270a.js" as="script"><link rel="prefetch" href="/assets/js/1.14023d64.js"><link rel="prefetch" href="/assets/js/10.59d9d3f2.js"><link rel="prefetch" href="/assets/js/11.2ebe9e04.js"><link rel="prefetch" href="/assets/js/12.3d2010cd.js"><link rel="prefetch" href="/assets/js/13.065dc4f7.js"><link rel="prefetch" href="/assets/js/15.7ad62009.js"><link rel="prefetch" href="/assets/js/16.5ec94e78.js"><link rel="prefetch" href="/assets/js/17.c24908e5.js"><link rel="prefetch" href="/assets/js/18.aef17f93.js"><link rel="prefetch" href="/assets/js/19.8299a6ae.js"><link rel="prefetch" href="/assets/js/20.f478c449.js"><link rel="prefetch" href="/assets/js/21.2ce256e9.js"><link rel="prefetch" href="/assets/js/23.509cfaa2.js"><link rel="prefetch" href="/assets/js/24.7c6b1e20.js"><link rel="prefetch" href="/assets/js/25.8350fcf3.js"><link rel="prefetch" href="/assets/js/26.ed91deb3.js"><link rel="prefetch" href="/assets/js/27.89c1aadf.js"><link rel="prefetch" href="/assets/js/28.cd058b93.js"><link rel="prefetch" href="/assets/js/29.c7da4005.js"><link rel="prefetch" href="/assets/js/30.2c92349d.js"><link rel="prefetch" href="/assets/js/31.16460e4b.js"><link rel="prefetch" href="/assets/js/32.9d8b0bca.js"><link rel="prefetch" href="/assets/js/33.09c29553.js"><link rel="prefetch" href="/assets/js/34.5bfd5eb9.js"><link rel="prefetch" href="/assets/js/35.06eb12d0.js"><link rel="prefetch" href="/assets/js/36.8cf25569.js"><link rel="prefetch" href="/assets/js/37.1e3db8b9.js"><link rel="prefetch" href="/assets/js/38.72f77894.js"><link rel="prefetch" href="/assets/js/39.3d0f8201.js"><link rel="prefetch" href="/assets/js/4.8d4f4248.js"><link rel="prefetch" href="/assets/js/41.cec59a9b.js"><link rel="prefetch" href="/assets/js/42.9c968d19.js"><link rel="prefetch" href="/assets/js/43.9bba8703.js"><link rel="prefetch" href="/assets/js/44.baf19df2.js"><link rel="prefetch" href="/assets/js/45.233d2c64.js"><link rel="prefetch" href="/assets/js/46.65e0a380.js"><link rel="prefetch" href="/assets/js/47.71426627.js"><link rel="prefetch" href="/assets/js/48.e45ff621.js"><link rel="prefetch" href="/assets/js/5.1ec6120b.js"><link rel="prefetch" href="/assets/js/6.2eb8fc3b.js"><link rel="prefetch" href="/assets/js/7.669e2cdf.js"><link rel="prefetch" href="/assets/js/8.5963ca3b.js"><link rel="prefetch" href="/assets/js/9.01c0f2a4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9c12eaa6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-0af67a15><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/gopher.png" alt="architecturecoding" class="logo"> <span class="site-name can-hide">architecturecoding</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/tutorials/" class="nav-link">Tutorials</a></div><div class="nav-item"><a href="/tricks/" class="nav-link router-link-active">Tricks</a></div><div class="nav-item"><a href="/series/" class="nav-link">Series</a></div> <a href="https://github.com/kevsersrca/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute!
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/tutorials/" class="nav-link">Tutorials</a></div><div class="nav-item"><a href="/tricks/" class="nav-link router-link-active">Tricks</a></div><div class="nav-item"><a href="/series/" class="nav-link">Series</a></div> <a href="https://github.com/kevsersrca/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute!
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"> <div class="content deprecation-warning" style="margin:1rem;margin-top:4.6rem;" data-v-2e56413c><p data-v-2e56413c><strong data-v-2e56413c>Warning:</strong> architecturecoding blog page under construction.
+		If you want to help, please click the <strong data-v-2e56413c>Help us improve this page!</strong> at the bottom. Thank you :)
+	</p></div> <div class="theme-default-content content__default"><h2 id="create-file-and-write-inside-data-in-go"><a href="#create-file-and-write-inside-data-in-go" class="header-anchor">#</a> Create file and write inside data in Go</h2> <p>Hi,</p> <p>Golang create file and write file in here.</p> <div class="language-golang extra-class"><pre class="language-text"><code>func saveFile(filename string, body []byte) (bool, error) {
+	f, err := os.Create(filename)
+	if err != nil {
+		return false, err
+	}
+	defer f.Close()
+
+	_, err = f.Write(body)
+    if err != nil {
+        return false, err
+    }
+	return true, nil
+}
+</code></pre></div><p>instead of <code>f.Write()</code> function, you should use <code>f.WriteString()</code>.</p> <p>Happy Coding,</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/kevsersrca/blog/edit/master/docs/tricks/golang-save-the-file-func.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ba5b4a04.js" defer></script><script src="/assets/js/14.a7f0b124.js" defer></script><script src="/assets/js/2.684f57a3.js" defer></script><script src="/assets/js/22.f287162d.js" defer></script><script src="/assets/js/40.dd74270a.js" defer></script>
+  </body>
+</html>

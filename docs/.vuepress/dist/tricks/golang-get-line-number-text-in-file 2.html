@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Golang get file number content | architecturecoding</title>
+    <meta name="description" content="Let get line in the file">
+    <link rel="stylesheet" href="/octicons.css">
+  <link rel="icon" href="/gopher.png">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="google-site-verification" content="tBy_B1L3z31YSdMNxFcSPKZYJZKXidfUrpM0n2arV34">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxanium&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.8799f0be.css" as="style"><link rel="preload" href="/assets/js/app.315ecac9.js" as="script"><link rel="preload" href="/assets/js/14.d2735d84.js" as="script"><link rel="preload" href="/assets/js/2.d0d266f8.js" as="script"><link rel="preload" href="/assets/js/22.bd0656cb.js" as="script"><link rel="preload" href="/assets/js/38.7fdd04ac.js" as="script"><link rel="prefetch" href="/assets/js/1.14023d64.js"><link rel="prefetch" href="/assets/js/10.22e07051.js"><link rel="prefetch" href="/assets/js/11.ab4f1aa9.js"><link rel="prefetch" href="/assets/js/12.3d2010cd.js"><link rel="prefetch" href="/assets/js/13.1017349c.js"><link rel="prefetch" href="/assets/js/15.aae96685.js"><link rel="prefetch" href="/assets/js/16.92790ab3.js"><link rel="prefetch" href="/assets/js/17.1662fe27.js"><link rel="prefetch" href="/assets/js/18.c0b2b691.js"><link rel="prefetch" href="/assets/js/19.7654f8e9.js"><link rel="prefetch" href="/assets/js/20.fa05d76a.js"><link rel="prefetch" href="/assets/js/21.3b73f1c7.js"><link rel="prefetch" href="/assets/js/23.27631903.js"><link rel="prefetch" href="/assets/js/24.37d8c3dc.js"><link rel="prefetch" href="/assets/js/25.a65bcc6e.js"><link rel="prefetch" href="/assets/js/26.232869f5.js"><link rel="prefetch" href="/assets/js/27.8e581438.js"><link rel="prefetch" href="/assets/js/28.294eb03d.js"><link rel="prefetch" href="/assets/js/29.ffb7d510.js"><link rel="prefetch" href="/assets/js/30.80099a61.js"><link rel="prefetch" href="/assets/js/31.ebfdf7ec.js"><link rel="prefetch" href="/assets/js/32.48c4e3aa.js"><link rel="prefetch" href="/assets/js/33.3352a329.js"><link rel="prefetch" href="/assets/js/34.1b119331.js"><link rel="prefetch" href="/assets/js/35.5b737d8f.js"><link rel="prefetch" href="/assets/js/36.b00245a4.js"><link rel="prefetch" href="/assets/js/37.0b29faf7.js"><link rel="prefetch" href="/assets/js/39.af1a62c4.js"><link rel="prefetch" href="/assets/js/4.915a6ca0.js"><link rel="prefetch" href="/assets/js/40.1abe1a52.js"><link rel="prefetch" href="/assets/js/41.d9f5c9e3.js"><link rel="prefetch" href="/assets/js/42.18ba2752.js"><link rel="prefetch" href="/assets/js/43.ab9d1679.js"><link rel="prefetch" href="/assets/js/44.76dc2e66.js"><link rel="prefetch" href="/assets/js/45.5b6784d0.js"><link rel="prefetch" href="/assets/js/46.99471a7b.js"><link rel="prefetch" href="/assets/js/47.ce8bbc1c.js"><link rel="prefetch" href="/assets/js/5.d96c0232.js"><link rel="prefetch" href="/assets/js/6.df1ac0ac.js"><link rel="prefetch" href="/assets/js/7.c5bd334c.js"><link rel="prefetch" href="/assets/js/8.d6ab2a3c.js"><link rel="prefetch" href="/assets/js/9.50cc89d0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8799f0be.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-0af67a15><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/gopher.png" alt="architecturecoding" class="logo"> <span class="site-name can-hide">architecturecoding</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/tutorials/" class="nav-link">Tutorials</a></div><div class="nav-item"><a href="/tricks/" class="nav-link router-link-active">Tricks</a></div><div class="nav-item"><a href="/series/" class="nav-link">Series</a></div> <a href="https://github.com/kevsersrca/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute!
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/tutorials/" class="nav-link">Tutorials</a></div><div class="nav-item"><a href="/tricks/" class="nav-link router-link-active">Tricks</a></div><div class="nav-item"><a href="/series/" class="nav-link">Series</a></div> <a href="https://github.com/kevsersrca/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute!
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"> <div class="content deprecation-warning" style="margin:1rem;margin-top:4.6rem;" data-v-2e56413c><p data-v-2e56413c><strong data-v-2e56413c>Warning:</strong> architecturecoding blog page under construction.
+		If you want to help, please click the <strong data-v-2e56413c>Help us improve this page!</strong> at the bottom. Thank you :)
+	</p></div> <div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#let-get-line-in-the-file">Let get line in the file</a></li></ul></div><p></p> <h3 id="let-get-line-in-the-file"><a href="#let-get-line-in-the-file" class="header-anchor">#</a> Let get line in the file</h3> <p>Hi,</p> <p>If you want to content in line from file, you should this function. Only call</p> <p><code>line, err := getLine('file.txt', 2)</code></p> <p>in this main block.</p> <p>Get Line Function:</p> <div class="language-python extra-class"><pre class="language-python"><code>func getLine<span class="token punctuation">(</span>filename string<span class="token punctuation">,</span> n <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>string<span class="token punctuation">,</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">//</span> Line number mustn't higher than <span class="token number">1</span>
+	<span class="token keyword">if</span> n <span class="token operator">&lt;</span> <span class="token number">1</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> fmt<span class="token punctuation">.</span>Errorf<span class="token punctuation">(</span><span class="token string">&quot;invalid request: line %d&quot;</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+    <span class="token operator">//</span> Get <span class="token builtin">file</span> contents
+	f<span class="token punctuation">,</span> err <span class="token punctuation">:</span><span class="token operator">=</span> os<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>filename<span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> nil <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> err
+	<span class="token punctuation">}</span>
+	defer f<span class="token punctuation">.</span>Close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	bf <span class="token punctuation">:</span><span class="token operator">=</span> bufio<span class="token punctuation">.</span>NewReader<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+	var line string
+
+    <span class="token keyword">for</span> lnum <span class="token punctuation">:</span><span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> lnum <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> lnum<span class="token operator">+</span><span class="token operator">+</span> <span class="token punctuation">{</span>
+		line<span class="token punctuation">,</span> err <span class="token operator">=</span> bf<span class="token punctuation">.</span>ReadString<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
+		<span class="token keyword">if</span> err <span class="token operator">==</span> io<span class="token punctuation">.</span>EOF <span class="token punctuation">{</span>
+			switch lnum <span class="token punctuation">{</span>
+			case <span class="token number">0</span><span class="token punctuation">:</span>
+				<span class="token keyword">return</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> errors<span class="token punctuation">.</span>New<span class="token punctuation">(</span><span class="token string">&quot;no lines in file&quot;</span><span class="token punctuation">)</span>
+			case <span class="token number">1</span><span class="token punctuation">:</span>
+				<span class="token keyword">return</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> errors<span class="token punctuation">.</span>New<span class="token punctuation">(</span><span class="token string">&quot;only 1 line&quot;</span><span class="token punctuation">)</span>
+			default<span class="token punctuation">:</span>
+				<span class="token keyword">return</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> fmt<span class="token punctuation">.</span>Errorf<span class="token punctuation">(</span><span class="token string">&quot;only %d lines&quot;</span><span class="token punctuation">,</span> lnum<span class="token punctuation">)</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">if</span> err <span class="token operator">!=</span> nil <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> err
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+    <span class="token operator">//</span> isEmpty
+	<span class="token keyword">if</span> line <span class="token operator">==</span> <span class="token string">&quot;&quot;</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> fmt<span class="token punctuation">.</span>Errorf<span class="token punctuation">(</span><span class="token string">&quot;line %d empty&quot;</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">return</span> line<span class="token punctuation">,</span> nil
+<span class="token punctuation">}</span>
+</code></pre></div><p>Happy coding 🐘</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/kevsersrca/blog/edit/master/docs/tricks/golang-get-line-number-text-in-file.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.315ecac9.js" defer></script><script src="/assets/js/14.d2735d84.js" defer></script><script src="/assets/js/2.d0d266f8.js" defer></script><script src="/assets/js/22.bd0656cb.js" defer></script><script src="/assets/js/38.7fdd04ac.js" defer></script>
+  </body>
+</html>
