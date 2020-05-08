@@ -14,9 +14,10 @@
     "travis-lint": "^1.0.0"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.2.0",
+    "@vuepress/plugin-google-analytics": "^1.4.1",
     "@vuepress/plugin-pwa": "^1.2.0",
     "date-fns": "^2.8.1",
-    "octicons": "^8.5.0"
+    "octicons": "^8.5.0",
+    "vuepress-plugin-minimal-analytics": "^0.1.4"
   }
 }

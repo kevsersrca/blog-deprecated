@@ -3,7 +3,7 @@ title: Hackerrank CPP Solutions
 description: CPP Challanges
 lang: en-US
 image: /sysctl.jpg
-date: 2020-02-07
+date: 2020-04-01
 tag: kubernetes
 layout: Post
 ---

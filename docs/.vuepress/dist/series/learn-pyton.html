@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Python Getting Started | architecturecoding</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="stylesheet" href="/octicons.css">
+    <link rel="icon" href="/gopher.png">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxanium&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="description" content="Beginner Python Notes">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="google-site-verification" content="tBy_B1L3z31YSdMNxFcSPKZYJZKXidfUrpM0n2arV34">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <link rel="preload" href="/assets/css/0.styles.bc25127d.css" as="style"><link rel="preload" href="/assets/js/app.322039e9.js" as="script"><link rel="preload" href="/assets/js/6.fa73bd4d.js" as="script"><link rel="preload" href="/assets/js/1.44d71c4b.js" as="script"><link rel="preload" href="/assets/js/17.aa74e67b.js" as="script"><link rel="preload" href="/assets/js/24.90c5eceb.js" as="script"><link rel="preload" href="/assets/js/20.d49fd5e1.js" as="script"><link rel="preload" href="/assets/js/33.fa788424.js" as="script"><link rel="prefetch" href="/assets/js/10.b3994679.js"><link rel="prefetch" href="/assets/js/11.afa9bf89.js"><link rel="prefetch" href="/assets/js/12.cfdd4b20.js"><link rel="prefetch" href="/assets/js/13.eac29ab9.js"><link rel="prefetch" href="/assets/js/14.88910ae8.js"><link rel="prefetch" href="/assets/js/15.0d02b100.js"><link rel="prefetch" href="/assets/js/16.f21c1bd8.js"><link rel="prefetch" href="/assets/js/18.caefc6c8.js"><link rel="prefetch" href="/assets/js/19.ce191db4.js"><link rel="prefetch" href="/assets/js/21.dc989c95.js"><link rel="prefetch" href="/assets/js/22.653c3db8.js"><link rel="prefetch" href="/assets/js/23.1f50b860.js"><link rel="prefetch" href="/assets/js/25.6e609a80.js"><link rel="prefetch" href="/assets/js/26.9f78c719.js"><link rel="prefetch" href="/assets/js/27.b477e8f7.js"><link rel="prefetch" href="/assets/js/28.f2c0319c.js"><link rel="prefetch" href="/assets/js/29.32eb7d55.js"><link rel="prefetch" href="/assets/js/3.c14135f7.js"><link rel="prefetch" href="/assets/js/30.104327fd.js"><link rel="prefetch" href="/assets/js/31.aa11049e.js"><link rel="prefetch" href="/assets/js/32.481a6aef.js"><link rel="prefetch" href="/assets/js/34.8d6dbe5f.js"><link rel="prefetch" href="/assets/js/35.6466f77d.js"><link rel="prefetch" href="/assets/js/36.1ebfecf2.js"><link rel="prefetch" href="/assets/js/37.1043fe89.js"><link rel="prefetch" href="/assets/js/38.c92ef7c5.js"><link rel="prefetch" href="/assets/js/39.d6583d72.js"><link rel="prefetch" href="/assets/js/4.df7eed20.js"><link rel="prefetch" href="/assets/js/40.9a7c27c7.js"><link rel="prefetch" href="/assets/js/41.4238f3ea.js"><link rel="prefetch" href="/assets/js/42.0315a31b.js"><link rel="prefetch" href="/assets/js/43.83fa6ec6.js"><link rel="prefetch" href="/assets/js/44.4fdbc6b8.js"><link rel="prefetch" href="/assets/js/45.74c07301.js"><link rel="prefetch" href="/assets/js/46.a1bcf4f7.js"><link rel="prefetch" href="/assets/js/47.96ee45c6.js"><link rel="prefetch" href="/assets/js/48.dbb388b0.js"><link rel="prefetch" href="/assets/js/5.7d106459.js"><link rel="prefetch" href="/assets/js/7.e3667401.js"><link rel="prefetch" href="/assets/js/8.97cc54b9.js"><link rel="prefetch" href="/assets/js/9.dacabd50.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bc25127d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-0af67a15><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/gopher.png" alt="architecturecoding" class="logo"> <span class="site-name can-hide">architecturecoding</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/tutorials/" class="nav-link">
+  Tutorials
+</a></div><div class="nav-item"><a href="/tricks/" class="nav-link">
+  Tricks
+</a></div><div class="nav-item"><a href="/series/" class="nav-link router-link-active">
+  Series
+</a></div> <a href="https://github.com/kevsersrca/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute!
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/tutorials/" class="nav-link">
+  Tutorials
+</a></div><div class="nav-item"><a href="/tricks/" class="nav-link">
+  Tricks
+</a></div><div class="nav-item"><a href="/series/" class="nav-link router-link-active">
+  Series
+</a></div> <a href="https://github.com/kevsersrca/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute!
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"><p class="navbar-fix page-width" data-v-0af67a15><a href="/news/" data-v-0af67a15>← Back to posts</a></p> <section class="wrapper" data-v-7b10cd83 data-v-0af67a15><h1 data-v-7b10cd83>Python Getting Started</h1> <p data-v-7b10cd83><strong>2020-05-01T00:00:00.000Z</strong> <!----></p> <p data-v-7b10cd83>Beginner Python Notes</p></section> <div class="page-width" data-v-0af67a15><hr data-v-0af67a15></div> <div class="content deprecation-warning" style="margin:1rem;margin-top:4.6rem;" data-v-2e56413c><p data-v-2e56413c><strong data-v-2e56413c>Warning:</strong> architecturecoding blog page under construction.
+		If you want to help, please click the <strong data-v-2e56413c>Help us improve this page!</strong> at the bottom. Thank you :)
+	</p></div> <div class="theme-default-content content__default"><h1 id="contents"><a href="#contents" class="header-anchor">#</a> Contents</h1> <p></p><div class="table-of-contents"><ul><li><a href="#installation">Installation</a></li><li><a href="#version-control">Version Control</a></li><li><a href="#print-somethings">Print Somethings</a></li><li><a href="#variables-and-assigning-values">Variables and assigning values</a></li><li><a href="#block-indentation">Block Indentation</a></li><li><a href="#datatypes">Datatypes</a></li></ul></div><p></p> <h2 id="installation"><a href="#installation" class="header-anchor">#</a> Installation</h2> <p><a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">Offical Installation Page<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="version-control"><a href="#version-control" class="header-anchor">#</a> Version Control</h2> <div class="language-python extra-class"><pre class="language-python"><code>python <span class="token operator">-</span><span class="token operator">-</span>version
+</code></pre></div><p>or</p> <div class="language-python extra-class"><pre class="language-python"><code>python <span class="token operator">-</span>V
+</code></pre></div><h2 id="print-somethings"><a href="#print-somethings" class="header-anchor">#</a> Print Somethings</h2> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Hello World'</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="variables-and-assigning-values"><a href="#variables-and-assigning-values" class="header-anchor">#</a> Variables and assigning values</h2> <ul><li>Variable names must not start with a symbol or number</li> <li>Variable names are case sensitive.</li> <li>If there is any error in this section, its may occur <code>NameError</code> , <code>SyntaxError</code> and <code>ValueError</code></li></ul> <p>Format:</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token operator">&lt;</span>variable name<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>
+</code></pre></div><p>Types:</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># Integer</span>
+a<span class="token operator">=</span><span class="token number">2</span> <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token comment"># Output: 2</span>
+
+<span class="token comment"># Integer</span>
+b <span class="token operator">=</span> <span class="token number">9223372036854775807</span> <span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+<span class="token comment"># Output: 9223372036854775807</span>
+
+<span class="token comment"># Floating point</span>
+pi <span class="token operator">=</span> <span class="token number">3.14</span> <span class="token keyword">print</span><span class="token punctuation">(</span>pi<span class="token punctuation">)</span>
+<span class="token comment"># Output: 3.14</span>
+
+<span class="token comment"># String</span>
+c <span class="token operator">=</span> <span class="token string">'A'</span> <span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+<span class="token comment"># Output: A</span>
+
+<span class="token comment"># String</span>
+name <span class="token operator">=</span> <span class="token string">'John Doe'</span> <span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token comment"># Output: John Doe</span>
+
+<span class="token comment"># Boolean</span>
+q <span class="token operator">=</span> <span class="token boolean">True</span> <span class="token keyword">print</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span>
+<span class="token comment"># Output: True</span>
+
+<span class="token comment"># Empty value or null data type</span>
+x <span class="token operator">=</span> <span class="token boolean">None</span> <span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token comment"># Output: None</span>
+</code></pre></div><p>Type Checking Function:</p> <div class="language-python extra-class"><pre class="language-python"><code>q <span class="token operator">=</span> <span class="token boolean">True</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># Output: &lt;type 'bool'&gt;</span>
+</code></pre></div><p>Multiple Assigning</p> <p>The error in last example can be obviated by assigning remaining values to equal number of arbitrary variables. This dummy variable can have any name, but it is conventional to use the underscore (_) for assigning unwanted values:</p> <div class="language-python extra-class"><pre class="language-python"><code>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span>
+<span class="token comment"># Output: 1 2 3</span>
+
+a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> _ <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span> 
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+<span class="token comment"># Output: 1, 2</span>
+</code></pre></div><p>You can also assign a single value to several variables simultaneously.</p> <div class="language-python extra-class"><pre class="language-python"><code> a<span class="token operator">=</span>b<span class="token operator">=</span>c<span class="token operator">=</span><span class="token number">1</span> 
+ <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span>
+ <span class="token comment"># Output: 1 1 1</span>
+</code></pre></div><p>List:</p> <div class="language-python extra-class"><pre class="language-python"><code>x <span class="token operator">=</span> y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span> <span class="token comment"># x and y are two different names for the same list object just created, [7,8, 9]</span>
+x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">13</span> <span class="token comment"># we are updating the value of the list [7, 8, 9] through one of its names, in this case</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>  <span class="token comment"># printing the value of the list using its other name</span>
+
+<span class="token comment"># Output: [13, 8, 9] # hence, naturally the change is reflected</span>
+</code></pre></div><p>Nested List:</p> <div class="language-python extra-class"><pre class="language-python"><code>x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span> <span class="token comment"># this is nested list print x[2]</span>
+<span class="token comment"># Output: [3, 4, 5]</span>
+<span class="token keyword">print</span> x<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token comment"># Output: 4</span>
+</code></pre></div><p>Again Assignment</p> <div class="language-python extra-class"><pre class="language-python"><code>a<span class="token operator">=</span><span class="token number">2</span> <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token comment"># Output: 2</span>
+a <span class="token operator">=</span> <span class="token string">&quot;New value&quot;</span> <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token comment"># Output: New value</span>
+</code></pre></div><h2 id="block-indentation"><a href="#block-indentation" class="header-anchor">#</a> Block Indentation</h2> <p>Python uses indentation to define control and loop constructs. This contributes to Python's readability, however, it requires the programmer to pay close attention to the use of whitespace. Thus, editor miscalibration could result in code that behaves in unexpected ways.</p> <ul><li>If there is any error in this section, its may occur <code>IndentationError</code></li></ul> <p>Example</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">if</span> a <span class="token operator">&gt;</span> b<span class="token punctuation">:</span>   <span class="token comment"># If block starts here</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>  <span class="token comment"># This is part of the if block</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>  <span class="token comment"># else must be at the same level as if</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token comment"># This line is part of the else block</span>
+
+</code></pre></div><h2 id="datatypes"><a href="#datatypes" class="header-anchor">#</a> Datatypes</h2> <p><code>bool</code>: A boolean value of either True or False. Logical operations like and, or, not can be performed on booleans.</p> <h4 id="numbers"><a href="#numbers" class="header-anchor">#</a> Numbers</h4> <p><code>int</code>: Integer number</p> <p><code>float</code>: Floating point number; precision depends on the implementation and system architecture, for CPython the float datatype corresponds to a C double.</p> <p><code>complex</code>: Complex numbers</p> <div class="language-python extra-class"><pre class="language-python"><code>a <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1j</span>
+b <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">+</span> <span class="token number">10j</span>
+</code></pre></div><h4 id="strings"><a href="#strings" class="header-anchor">#</a> Strings</h4></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/kevsersrca/blog/edit/master/docs/series/learn-pyton.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.322039e9.js" defer></script><script src="/assets/js/6.fa73bd4d.js" defer></script><script src="/assets/js/1.44d71c4b.js" defer></script><script src="/assets/js/17.aa74e67b.js" defer></script><script src="/assets/js/24.90c5eceb.js" defer></script><script src="/assets/js/20.d49fd5e1.js" defer></script><script src="/assets/js/33.fa788424.js" defer></script>
+  </body>
+</html>

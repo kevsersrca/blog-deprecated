@@ -1,5 +1,6 @@
 module.exports = {
 	plugins: [
+		['minimal-analytics', {ga: 'UA-145931208-1'}],
 		'@vuepress/last-updated',
 		{
 			transformer: (timestamp, lang) => {
@@ -12,7 +13,10 @@ module.exports = {
 		'@vuepress/pwa',{
 			serviceWorker: true,
 			updatePopup: true
-		}
+		},
+		'@vuepress/google-analytics',{
+        		'ga': 'UA-145931208-1'
+      		}
 	],
 	head: [
 		['link', { rel: 'stylesheet', href: '/octicons.css' }],
