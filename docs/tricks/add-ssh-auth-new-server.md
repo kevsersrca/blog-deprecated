@@ -17,7 +17,7 @@ if server is new creation and doesnt have a ssh file.
 ```bash
  mkdir ~/.ssh && touch ~/.ssh/authorized_keys &&
  echo 'ssh-rsa is here' >> ~/.ssh/authorized_keys &&
- chmod 700 .ssh && chmod 600 .ssh/authorized_keys
+ chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
 ```
 
 already ssh folder
