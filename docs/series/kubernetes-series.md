@@ -4,7 +4,7 @@ description: Kubernetes Series
 lang: en-US
 image: /kubernetes.jpg
 date: 2020-02-07
-tag: kubernetes
+tag: kubernetes,docker
 layout: Post
 ---
 

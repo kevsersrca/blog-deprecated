@@ -2,8 +2,6 @@
 	<main class="page">
 		<slot name="top" />
 
-		<DeprecationWarning style="margin: 1rem; margin-top: 4.6rem;" />
-
 		<Content class="theme-default-content" />
 
 		<footer class="page-edit">

@@ -1,10 +1,10 @@
 ---
-title: How does git branch work?
+title: Git branch
 description: Git branch add, list and delete
 lang: en-US
 image: /branch.png
 date: 2019-12-11
-tag: git-branch
+tag: git-branch,git
 author: kev
 layout: Post
 ---

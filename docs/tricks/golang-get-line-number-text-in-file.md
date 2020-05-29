@@ -1,10 +1,10 @@
 ---
-title: Golang get file number content
+title: Golang Get Line Number
 description: Let get line in the file
 lang: en-US
 image: /gopher-look.png
 date: 2019-12-12
-tag: golang
+tag: golang,snippet
 layout: Post
 ---
 

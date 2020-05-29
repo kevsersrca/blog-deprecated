@@ -1,9 +1,9 @@
 ---
-title: Vuepress Deployment on github-pages
+title: Vuepress Deployment Script
 description: Let deploy automation for gh-pages
 lang: en-US
 image: /vuepress.png
-tag: gh-pages
+tag: gh-pages,vuepress
 date: 2019-12-12
 layout: Post
 ---

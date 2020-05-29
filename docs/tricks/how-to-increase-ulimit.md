@@ -3,7 +3,7 @@ title: How to increase ulimit ?
 description: Let increase ulimit count in sysctl
 lang: en-US
 image: /sysctl.jpg
-tag: sysctl
+tag: sysctl,linux
 author: kev
 date: 2019-12-12
 layout: Post

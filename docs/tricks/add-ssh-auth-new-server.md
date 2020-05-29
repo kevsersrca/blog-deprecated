@@ -1,10 +1,10 @@
 ---
-title: How to push ssh authorized key ?
+title: SSH Authorize
 description: Lets push ssh key for new creation server
 lang: en-US
 image: /ssh.png
 date: 2019-12-12
-tag: ssh-key
+tag: ssh-key,linux
 author: kev
 layout: Post
 ---

@@ -1,10 +1,10 @@
 ---
-title: Useful Docker Scripts
+title: Docker Scripts
 description: more docker...
 lang: en-US
 image: /branch.png
 date: 2020-02-07
-tag: docker
+tag: docker,script
 author: kev
 layout: Post
 ---

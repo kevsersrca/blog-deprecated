@@ -1,10 +1,10 @@
 ---
-title: Hackerrank CPP Solutions
+title: Hackerrank CPP
 description: CPP Challanges
 lang: en-US
 image: /sysctl.jpg
 date: 2020-04-01
-tag: kubernetes
+tag: hackerrank,cpp
 layout: Post
 ---
 

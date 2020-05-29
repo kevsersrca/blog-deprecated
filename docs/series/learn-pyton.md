@@ -1,10 +1,10 @@
 ---
-title: Python Getting Started
+title: Python Learning Series
 description: Beginner Python Notes
 lang: en-US
 image: /python.jpg
 date: 2020-05-01
-tag: python
+tag: python,beginner
 layout: Post
 ---
 
