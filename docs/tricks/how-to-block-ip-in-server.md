@@ -1,10 +1,10 @@
 ---
-title: How to block ip in server ?
+title: IPTABLES Block IP
 description: Lets block ip address in server with iptables
 lang: en-US
 image: /iptables.jpg
 date: 2019-12-12
-tag: iptables
+tag: iptables,linux
 author: kev
 layout: Post
 ---

@@ -15,8 +15,7 @@
 		</header>
 
 		<div id="home-main">
-			<Content class="theme-default-content custom home-content" />
-			<HomeSideBar />
+			<Content />
 		</div>
 
 		<div class="footer" v-if="data.footer">{{ data.footer }}</div>
@@ -54,10 +53,10 @@
 		font-size: 30px;
 	}
 	#home-main {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		grid-column-gap: 4rem;
 		margin-top: 3rem;
+	}
+	.home-content{
+		padding: 0 2rem;
 	}
 	@media (max-width: $MQMobile) {
 		.home-content {

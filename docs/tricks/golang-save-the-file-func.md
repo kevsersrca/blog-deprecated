@@ -4,7 +4,7 @@ description: Let create a file
 lang: en-US
 image: /gopher-look.png
 date: 2020-02-07
-tag: golang
+tag: golang,create,write
 layout: Post
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: Docker with php + mysql + phpmyadmin
+title: Docker LAMP
 description: lets create docker compose file for mysql and phpmyadmin.
 lang: en-US
 image: /docker.png
 date: 2020-05-12
-tag: docker
+tag: docker,php,mysql
 author: kev
 layout: Post
 ---

@@ -4,9 +4,7 @@
 			<p class="navbar-fix page-width">
 				<router-link to="/news/">← Back to posts</router-link>
 			</p>
-			<PostJumbotron :post="$page.frontmatter"/>
 			<div class="page-width">
-				<hr>
 			</div>
 		</template>
 	</Layout>

@@ -1,6 +1,6 @@
 module.exports = {
 	plugins: [
-		['minimal-analytics', {ga: 'UA-145931208-1'}],
+		['minimal-analytics', {ga: 'UA-165934557-1'}],
 		'@vuepress/last-updated',
 		{
 			transformer: (timestamp, lang) => {
@@ -14,9 +14,9 @@ module.exports = {
 			serviceWorker: true,
 			updatePopup: true
 		},
-		'@vuepress/google-analytics',{
-        		'ga': 'UA-145931208-1'
-      		}
+		['@vuepress/google-analytics',{
+        		'ga': 'UA-165934557-1'
+      		}]
 	],
 	head: [
 		['link', { rel: 'stylesheet', href: '/octicons.css' }],
@@ -38,7 +38,6 @@ module.exports = {
 		lastUpdated: 'Last Updated',
 		nav: [
 			{ text: 'Home', link: '/' },
-			{ text: 'Tutorials', link: '/tutorials/' },
 			{ text: 'Tricks', link: '/tricks/' },
 			{ text: 'Series', link: '/series/' },
 		],
