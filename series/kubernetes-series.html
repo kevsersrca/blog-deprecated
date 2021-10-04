@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kubernetes Series | architecturecoding</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="stylesheet" href="/octicons.css">
+    <link rel="icon" href="/gopher.png">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxanium&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="description" content="Kubernetes Series">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="google-site-verification" content="tBy_B1L3z31YSdMNxFcSPKZYJZKXidfUrpM0n2arV34">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <link rel="preload" href="/assets/css/0.styles.ba5bc583.css" as="style"><link rel="preload" href="/assets/js/app.c1f9c2d5.js" as="script"><link rel="preload" href="/assets/js/6.c39e907e.js" as="script"><link rel="preload" href="/assets/js/1.44d71c4b.js" as="script"><link rel="preload" href="/assets/js/17.aa74e67b.js" as="script"><link rel="preload" href="/assets/js/24.141cec93.js" as="script"><link rel="preload" href="/assets/js/32.481a6aef.js" as="script"><link rel="prefetch" href="/assets/js/10.b3994679.js"><link rel="prefetch" href="/assets/js/11.afa9bf89.js"><link rel="prefetch" href="/assets/js/12.cfdd4b20.js"><link rel="prefetch" href="/assets/js/13.e508ee1f.js"><link rel="prefetch" href="/assets/js/14.88910ae8.js"><link rel="prefetch" href="/assets/js/15.0d02b100.js"><link rel="prefetch" href="/assets/js/16.f21c1bd8.js"><link rel="prefetch" href="/assets/js/18.caefc6c8.js"><link rel="prefetch" href="/assets/js/19.ce191db4.js"><link rel="prefetch" href="/assets/js/20.d49fd5e1.js"><link rel="prefetch" href="/assets/js/21.dc989c95.js"><link rel="prefetch" href="/assets/js/22.653c3db8.js"><link rel="prefetch" href="/assets/js/23.1f50b860.js"><link rel="prefetch" href="/assets/js/25.6e609a80.js"><link rel="prefetch" href="/assets/js/26.9f78c719.js"><link rel="prefetch" href="/assets/js/27.e957584a.js"><link rel="prefetch" href="/assets/js/28.f2c0319c.js"><link rel="prefetch" href="/assets/js/29.8f30d4a0.js"><link rel="prefetch" href="/assets/js/3.c14135f7.js"><link rel="prefetch" href="/assets/js/30.3bfff91c.js"><link rel="prefetch" href="/assets/js/31.f49cf0e1.js"><link rel="prefetch" href="/assets/js/33.d6224ea6.js"><link rel="prefetch" href="/assets/js/34.aaca9e1a.js"><link rel="prefetch" href="/assets/js/35.870cd4da.js"><link rel="prefetch" href="/assets/js/36.7d8520b8.js"><link rel="prefetch" href="/assets/js/37.999aa300.js"><link rel="prefetch" href="/assets/js/38.86ebb62e.js"><link rel="prefetch" href="/assets/js/39.c733aaa4.js"><link rel="prefetch" href="/assets/js/4.cb1955be.js"><link rel="prefetch" href="/assets/js/40.ce2a6ca4.js"><link rel="prefetch" href="/assets/js/41.fda277f9.js"><link rel="prefetch" href="/assets/js/42.9318bed8.js"><link rel="prefetch" href="/assets/js/43.f6fb4f0a.js"><link rel="prefetch" href="/assets/js/44.81accddd.js"><link rel="prefetch" href="/assets/js/45.ffeb89a1.js"><link rel="prefetch" href="/assets/js/46.2bce9f9b.js"><link rel="prefetch" href="/assets/js/47.284b572a.js"><link rel="prefetch" href="/assets/js/48.dbb388b0.js"><link rel="prefetch" href="/assets/js/5.00ef60f1.js"><link rel="prefetch" href="/assets/js/7.e3667401.js"><link rel="prefetch" href="/assets/js/8.4c56535d.js"><link rel="prefetch" href="/assets/js/9.e49fca47.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ba5bc583.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-22a2f21f><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/gopher.png" alt="architecturecoding" class="logo"> <span class="site-name can-hide">architecturecoding</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/tricks/" class="nav-link">
+  Tricks
+</a></div><div class="nav-item"><a href="/series/" class="nav-link router-link-active">
+  Series
+</a></div> <a href="https://github.com/kevsersrca/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute!
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/tricks/" class="nav-link">
+  Tricks
+</a></div><div class="nav-item"><a href="/series/" class="nav-link router-link-active">
+  Series
+</a></div> <a href="https://github.com/kevsersrca/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute!
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"><p class="navbar-fix page-width" data-v-22a2f21f><a href="/news/" data-v-22a2f21f>← Back to posts</a></p> <section class="wrapper" data-v-7b10cd83 data-v-22a2f21f><h1 data-v-7b10cd83>Kubernetes Series</h1> <p data-v-7b10cd83><!----></p> <p data-v-7b10cd83>Kubernetes Series</p></section> <div class="page-width" data-v-22a2f21f></div> <div class="theme-default-content content__default"><h1 id="contents"><a href="#contents" class="header-anchor">#</a> Contents</h1> <p></p><div class="table-of-contents"><ul><li><a href="#definition">Definition</a></li><li><a href="#kubectl-alias">Kubectl Alias</a></li><li><a href="#cluster-info">Cluster Info</a></li><li><a href="#contexts">Contexts</a></li><li><a href="#get-commands">Get Commands</a></li><li><a href="#namespaces">Namespaces</a></li><li><a href="#labels">Labels</a></li><li><a href="#describe-command">Describe Command</a></li><li><a href="#delete-command">Delete Command</a></li><li><a href="#create-vs-apply">Create vs Apply</a></li><li><a href="#create-pod">Create Pod</a></li><li><a href="#create-deployment">Create Deployment</a></li><li><a href="#create-service">Create Service</a></li><li><a href="#export-yaml-for-new-pod">Export YAML for New Pod</a></li><li><a href="#export-yaml-for-existing-object">Export YAML for Existing Object</a></li><li><a href="#logs">Logs</a></li><li><a href="#port-forward">Port Forward</a></li><li><a href="#scaling">Scaling</a></li><li><a href="#autoscaling">Autoscaling</a></li><li><a href="#rollout">Rollout</a></li><li><a href="#pod-example">Pod Example</a></li><li><a href="#deployment-example">Deployment Example</a></li><li><a href="#dashboard">Dashboard</a></li></ul></div><p></p> <h2 id="definition"><a href="#definition" class="header-anchor">#</a> Definition</h2> <p>A cheat sheet for Kubernetes commands.</p> <p><code>Master</code>: The machine that controls Kubernetes nodes. This is where all task assignments originate.</p> <p><code>Node</code>: These machines perform the requested, assigned tasks. The Kubernetes master controls them.</p> <p><code>Pod</code>: A group of one or more containers deployed to a single node. All containers in a pod share an IP address, IPC, hostname, and other resources. Pods abstract network and storage away from the underlying container. This lets you move containers around the cluster more easily.</p> <p><code>Replication controller</code>:  This controls how many identical copies of a pod should be running somewhere on the cluster.</p> <p><code>Service</code>: This decouples work definitions from the pods. Kubernetes service proxies automatically get service requests to the right pod—no matter where it moves to in the cluster or even if it’s been replaced.</p> <p><code>Kubelet</code>: This service runs on nodes, reads the container manifests, and ensures the defined containers are started and running.</p> <p><code>kubectl</code>: This is the command line configuration tool for Kubernetes.</p> <p><img src="/kubernetes-diagram.png" alt="kubernetes" title="Kubernetes Diagram"></p> <h2 id="kubectl-alias"><a href="#kubectl-alias" class="header-anchor">#</a> Kubectl Alias</h2> <p>Linux and OSX</p> <div class="language- extra-class"><pre class="language-text"><code>$ alias k=kubectl
+</code></pre></div><p>Windows</p> <div class="language- extra-class"><pre class="language-text"><code>$ Set-Alias -Name k -Value kubectl
+</code></pre></div><h2 id="cluster-info"><a href="#cluster-info" class="header-anchor">#</a> Cluster Info</h2> <ul><li>Get clusters</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl config get-clusters
+</code></pre></div><ul><li>Get cluster info.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl cluster-info
+Kubernetes master is running at https://172.17.0.58:8443
+</code></pre></div><h2 id="contexts"><a href="#contexts" class="header-anchor">#</a> Contexts</h2> <p>A context is a cluster, namespace and user.</p> <ul><li>Get a list of contexts.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl config get-contexts
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>CURRENT   NAME                 CLUSTER                      AUTHINFO             NAMESPACE
+          docker-desktop       docker-desktop               docker-desktop
+*         foo                  foo                          foo                  bar
+</code></pre></div><ul><li>Get the current context.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl config current-context
+foo
+</code></pre></div><ul><li>Switch current context.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl config use-conext docker-desktop
+</code></pre></div><ul><li>Set default namesapce</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl config set-context $(kubectl config current-context) --namespace=my-namespace
+</code></pre></div><p>To switch between contexts, you can also install and use <a href="https://github.com/ahmetb/kubectx" target="_blank" rel="noopener noreferrer">kubectx<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <h2 id="get-commands"><a href="#get-commands" class="header-anchor">#</a> Get Commands</h2> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl get all
+$ kubectl get namespaces
+$ kubectl get services
+$ kubectl get replicationcontroller
+$ kubectl get deployments
+$ kubectl get ingress
+$ kubectl get configmaps
+$ kubectl get nodes
+$ kubectl get pods
+$ kubectl get rs
+$ kubectl get svc kuard
+$ kubectl get endpoints kuard
+</code></pre></div><p>Additional switches that can be added to the above commands:</p> <ul><li><code>-o wide</code> - Show more information.</li> <li><code>--watch</code> or <code>-w</code> - watch for changes.</li></ul> <h2 id="namespaces"><a href="#namespaces" class="header-anchor">#</a> Namespaces</h2> <ul><li><code>--namespace</code> - Get a resource for a specific namespace.</li></ul> <p>You can set the default namespace for the current context like so:</p> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl config set-context $(kubectl config current-context) --namespace=my-namespace
+</code></pre></div><p>To switch namespaces, you can also install and use <a href="https://github.com/ahmetb/kubectx/blob/master/kubens" target="_blank" rel="noopener noreferrer">kubens<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <h2 id="labels"><a href="#labels" class="header-anchor">#</a> Labels</h2> <ul><li>Get pods showing labels.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl get pods --show-labels
+</code></pre></div><ul><li>Get pods by label.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl get pods -l environment=production,tier!=frontend
+$ kubectl get pods -l 'environment in (production,test),tier notin (frontend,backend)'
+</code></pre></div><h2 id="describe-command"><a href="#describe-command" class="header-anchor">#</a> Describe Command</h2> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl describe nodes [id]
+$ kubectl describe pods [id]
+$ kubectl describe rs [id]
+$ kubectl describe svc kuard [id]
+$ kubectl describe endpoints kuard [id]
+</code></pre></div><h2 id="delete-command"><a href="#delete-command" class="header-anchor">#</a> Delete Command</h2> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl delete nodes [id]
+$ kubectl delete pods [id]
+$ kubectl delete rs [id]
+$ kubectl delete svc kuard [id]
+$ kubectl delete endpoints kuard [id]
+</code></pre></div><p>Force a deletion of a pod without waiting for it to gracefully shut down</p> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl delete pod-name --grace-period=0 --force
+</code></pre></div><h2 id="create-vs-apply"><a href="#create-vs-apply" class="header-anchor">#</a> Create vs Apply</h2> <p><code>kubectl create</code> can be used to create new resources while <code>kubectl apply</code> inserts or updates resources while maintaining any manual changes made like scaling pods.</p> <ul><li><code>--record</code> - Add the current command as an annotation to the resource.</li> <li><code>--recursive</code> - Recursively look for yaml in the specified directory.</li></ul> <h2 id="create-pod"><a href="#create-pod" class="header-anchor">#</a> Create Pod</h2> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl run kuard --generator=run-pod/v1 --image=gcr.io/kuar-demo/kuard-amd64:1 --output yaml --export --dry-run &gt; kuard-pod.yml
+$ kubectl apply -f kuard-pod.yml
+</code></pre></div><h2 id="create-deployment"><a href="#create-deployment" class="header-anchor">#</a> Create Deployment</h2> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl run kuard --image=gcr.io/kuar-demo/kuard-amd64:1 --output yaml --export --dry-run &gt; kuard-deployment.yml
+$ kubectl apply -f kuard-deployment.yml
+</code></pre></div><h2 id="create-service"><a href="#create-service" class="header-anchor">#</a> Create Service</h2> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl expose deployment kuard --port 8080 --target-port=8080 --output yaml --export --dry-run &gt; kuard-service.yml
+$ kubectl apply -f kuard-service.yml
+</code></pre></div><h2 id="export-yaml-for-new-pod"><a href="#export-yaml-for-new-pod" class="header-anchor">#</a> Export YAML for New Pod</h2> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl run my-cool-app —-image=me/my-cool-app:v1 --output yaml --export --dry-run &gt; my-cool-app.yaml
+</code></pre></div><h2 id="export-yaml-for-existing-object"><a href="#export-yaml-for-existing-object" class="header-anchor">#</a> Export YAML for Existing Object</h2> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl get deployment my-cool-app --output yaml --export &gt; my-cool-app.yaml
+</code></pre></div><h2 id="logs"><a href="#logs" class="header-anchor">#</a> Logs</h2> <ul><li>Get logs.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl logs -l app=kuard
+</code></pre></div><ul><li>Get logs for previously terminated container.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl logs POD_NAME --previous
+</code></pre></div><ul><li>Watch logs in real time.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl attach POD_NAME
+</code></pre></div><ul><li>Copy files out of pod (Requires <code>tar</code> binary in container).</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl cp POD_NAME:/var/log .
+</code></pre></div><p>You can also install and use <a href="https://github.com/boz/kail" target="_blank" rel="noopener noreferrer">kail<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <h2 id="port-forward"><a href="#port-forward" class="header-anchor">#</a> Port Forward</h2> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl port-forward deployment/kuard 8080:8080
+</code></pre></div><h2 id="scaling"><a href="#scaling" class="header-anchor">#</a> Scaling</h2> <ul><li>Update replicas.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl scale deployment nginx-deployment --replicas=10
+</code></pre></div><h2 id="autoscaling"><a href="#autoscaling" class="header-anchor">#</a> Autoscaling</h2> <ul><li>Set autoscaling config.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>vkubectl autoscale deployment nginx-deployment --min=10 --max=15 --cpu-percent=80
+</code></pre></div><h2 id="rollout"><a href="#rollout" class="header-anchor">#</a> Rollout</h2> <ul><li>Get rollout status.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl rollout status deployment/nginx-deployment
+Waiting for rollout to finish: 2 out of 3 new replicas have been updated...
+deployment &quot;nginx-deployment&quot; successfully rolled out
+</code></pre></div><ul><li>Get rollout history.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl rollout history deployment/nginx-deployment
+$ kubectl rollout history deployment/nginx-deployment --revision=2
+</code></pre></div><ul><li>Undo a rollout.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl rollout undo deployment/nginx-deployment
+$ kubectl rollout undo deployment/nginx-deployment --to-revision=2
+</code></pre></div><ul><li>Pause/resume a rollout</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl rollout pause deployment/nginx-deployment
+$ kubectl rollout resume deploy/nginx-deployment
+</code></pre></div><h2 id="pod-example"><a href="#pod-example" class="header-anchor">#</a> Pod Example</h2> <div class="language- extra-class"><pre class="language-text"><code>apiVersion: v1
+kind: Pod
+metadata:
+  name: cuda-test
+spec:
+  containers:
+    - name: cuda-test
+      image: &quot;k8s.gcr.io/cuda-vector-add:v0.1&quot;
+      resources:
+        limits:
+          nvidia.com/gpu: 1
+  nodeSelector:
+    accelerator: nvidia-tesla-p100
+</code></pre></div><h2 id="deployment-example"><a href="#deployment-example" class="header-anchor">#</a> Deployment Example</h2> <div class="language- extra-class"><pre class="language-text"><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: my-namespace
+  labels:
+    - environment: production,
+    - teir: frontend
+  annotations:
+    - key1: value1,
+    - key2: value2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
+</code></pre></div><h2 id="dashboard"><a href="#dashboard" class="header-anchor">#</a> Dashboard</h2> <ul><li>Enable proxy</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl proxy
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/kevsersrca/blog/edit/master/docs/series/kubernetes-series.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/4/2020, 4:14:07 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.c1f9c2d5.js" defer></script><script src="/assets/js/6.c39e907e.js" defer></script><script src="/assets/js/1.44d71c4b.js" defer></script><script src="/assets/js/17.aa74e67b.js" defer></script><script src="/assets/js/24.141cec93.js" defer></script><script src="/assets/js/32.481a6aef.js" defer></script>
+  </body>
+</html>
